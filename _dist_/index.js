@@ -26,6 +26,9 @@
 //     console.log(divImagen)
 // }
 // botonCrear.addEventListener('click',accion)
+// nos importamos el metodo que  quisimos exportar de lazy.js
+import { resgisterImage } from "./lazy.js";
+
 const minimum = 1
 const maximum = 122
 const randomImage = () => Math.floor(Math.random()*(maximum-minimum)) + minimum 
@@ -50,5 +53,7 @@ addButton.className = 'bg-green-300 p-3 rounded'
 const addImage = () => {
     const newImage = createImageNode();
     mountNode.append(newImage)
+    // usando el observador para detectar que imagenes se visualizan en en la pantalla 
+    resgisterImage(newImage)
 }
 addButton.addEventListener('click',addImage)
