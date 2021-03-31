@@ -7,20 +7,26 @@ const isIntersecting = (entry) => {
     return entry.isIntersecting //true dentro de la pantalla y falso si es lo contrario
 } 
 
-const accion = (entry) =>{
+const loadImage = (entry) =>{
     // para obtener al imagen que se esta observando
-    const nodo = entry.target
-    // mostrar en consola la imagen que se registró
-    console.log('Hola')
+    const container = entry.target // contenedor DIV 
+    const imagen = container.firstChild
+    const url = imagen.dataset.src
+    // load image
+    imagen.src = url
+   
+    // debugger; // parar el comando exactamente en el liugar donde deseo
+     // mostrar en consola la imagen que se registró
+    console.log(entry.target)
 
     // desregisistra la imagen (unlisten)
-    oberver.unobserve(nodo)
+    oberver.unobserve(container)
 }
 
 const oberver = new IntersectionObserver((entries)=>{
     entries
         .filter(isIntersecting)
-        .forEach(accion)
+        .forEach(loadImage)
 })
 
 export const resgisterImage = (imagen) =>{
