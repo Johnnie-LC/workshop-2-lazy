@@ -44,7 +44,7 @@ const createImageNode = () => {
     container.appendChild(imagen)
     return  container     
 }
-const nuevaImagen = createImageNode()
+
 const mountNode = document.getElementById('images')
 
 const addButton = document.querySelector('button')
