@@ -39,7 +39,7 @@ const createImageNode = () => {
     container.className = 'p-4'
 
     const imagen = document.createElement('img')
-    imagen.src = `https://randomfox.ca/images/${randomImage()}.jpg`
+    imagen.dataset.src = `https://randomfox.ca/images/${randomImage()}.jpg`
     imagen.className = 'mx-auto w-80'
     container.appendChild(imagen)
     return  container     
