@@ -1,3 +1,9 @@
 @import "../_snowpack/pkg/tailwindcss/dist/base.css";
 @import "../_snowpack/pkg/tailwindcss/dist/components.css";
 @import "../_snowpack/pkg/tailwindcss/dist/utilities.css";
+
+   /* img {
+    background-color: gray; height: 20rem; width: 20rem;
+    src: '#h';
+    height: auto;
+}    */
