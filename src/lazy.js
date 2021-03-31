@@ -13,8 +13,15 @@ const loadImage = (entry) =>{
     const imagen = container.firstChild
     const url = imagen.dataset.src
     // load image
-    imagen.src = url
-   
+    // 1. recuadro gris
+    setTimeout(()=>{
+        imagen.className = 'mx-auto w-80 h-auto'
+        imagen.src = url
+    },2000)
+
+    // 2. agregar un boton que elimine todo el html
+    // 3. Reporte de  total de imagenes que se han cargado y el total de imagenes que se han agregadoo 
+    
     // debugger; // parar el comando exactamente en el liugar donde deseo
      // mostrar en consola la imagen que se registró
     console.log(entry.target)
