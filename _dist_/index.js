@@ -49,7 +49,7 @@ const mountNode = document.getElementById('images')
 
 const addButton = document.querySelector('button')
 
-addButton.className = 'bg-green-300 p-3 rounded'
+addButton.className = 'bg-green-300 p-3 rounded text-green-600'
 const addImage = () => {
     const newImage = createImageNode();
     // newImage.firstChild.width = 'background-color: gray; height: 20rem; width: 20rem;src: "#h" '
