@@ -59,6 +59,7 @@ const addImage = () => {
     mountNode.append(newImage)
     // usando el observador para detectar que imagenes se visualizan en en la pantalla 
     resgisterImage(newImage)
+    // console.log('cuantos imágenes :' + mountNode.childElementCount)
 }
 
 // remover imagenes del html
@@ -69,3 +70,4 @@ const removeImage = () => {
 
 addButton.addEventListener('click',addImage)
 removeButton.addEventListener('click', removeImage)
+
