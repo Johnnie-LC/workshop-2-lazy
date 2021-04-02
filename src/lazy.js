@@ -16,9 +16,9 @@ const loadImage = (entry) =>{
     // load image
     // 1. recuadro gris
     setTimeout(()=>{
-        imagen.className = 'mx-auto w-80 h-auto '
+        imagen.className = 'mx-auto w-80 h-auto rounded-md'
         imagen.src = url
-    },1000)
+    },0)
 
     // 2. agregar un boton que elimine todo el html
     // resuelto

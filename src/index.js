@@ -55,7 +55,7 @@ const addImage = () => {
     const newImage = createImageNode();
     // newImage.firstChild.width = 'background-color: gray; height: 20rem; width: 20rem;src: "#h" '
     const imagen = newImage.firstChild 
-    imagen.className = 'mx-auto w-80 h-80 bg-gray-300'
+    imagen.className = 'mx-auto w-80 h-80 bg-gray-300 rounded-md'
     mountNode.append(newImage)
     // usando el observador para detectar que imagenes se visualizan en en la pantalla 
     resgisterImage(newImage)
