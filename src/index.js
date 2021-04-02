@@ -47,7 +47,8 @@ const createImageNode = () => {
 
 const mountNode = document.getElementById('images')
 
-const addButton = document.querySelector('button')
+const addButton = document.querySelector('#addButton')
+const removeButton = document.querySelector('#removeButton')
 
 addButton.className = 'bg-green-300 p-3 rounded text-green-600'
 const addImage = () => {
@@ -59,4 +60,12 @@ const addImage = () => {
     // usando el observador para detectar que imagenes se visualizan en en la pantalla 
     resgisterImage(newImage)
 }
+
+// remover imagenes del html
+const removeImage = () => {
+   const allImages = mountNode.querySelectorAll('div')
+   return allImages.forEach((image)=> image.remove())
+}
+
 addButton.addEventListener('click',addImage)
+removeButton.addEventListener('click', removeImage)
